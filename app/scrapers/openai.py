@@ -47,9 +47,12 @@ class OpenAIScraper:
         return articles
 
   
+
+
 if __name__ == "__main__":
     scraper = OpenAIScraper()
-    articles: List[OpenAIArticle] = scraper.get_articles(hours=50)
+    articles: List[OpenAIArticle] = scraper.get_articles(hours=200)
     print(f"Total articles found: {len(articles)}")
     for article in articles:
         print(f"- {article.title} (published: {article.published_at})")
+        
